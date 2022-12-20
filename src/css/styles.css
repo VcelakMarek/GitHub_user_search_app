@@ -1,0 +1,48 @@
+:root {
+  /* light_mode_colors */
+  --light-blue: #0079ff;
+  --grey: #697c9a;
+  --blue: #4b6a9b;
+  --dark-blue: #2b3442;
+  --silver-white: #f6f8ff;
+  --white: #fefefe;
+  /* dark_mode_colors */
+  --dm-white: #ffffff;
+  --dm-blue: #1e2a47;
+  --dm-dark-blue: #141d2f;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono";
+  font-style: normal;
+  background-color: var(--silver-white);
+  /* height: 97vh; */
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 15px;
+}
+
+/* @media (min-width: 800px) {
+  :root {
+    --dark-blue: #ffffff;
+    --white: #1e2a47;
+    --silver-white: #141d2f;
+  }
+  .card p {
+    color: #ffffff;
+  }
+} */
+
+@media (min-width: 650px) {
+  .card {
+    width: 573px;
+  }
+}

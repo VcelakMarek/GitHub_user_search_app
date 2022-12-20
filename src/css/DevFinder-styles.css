@@ -1,0 +1,47 @@
+header {
+  width: 327px;
+  height: 38px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+h1 {
+  color: #222731;
+}
+
+.mode-select {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  color: var(--blue);
+  border: none;
+  background-color: var(--silver-white);
+  font-family: ;
+}
+
+.mode-select img {
+  height: 20px;
+  width: 20px;
+}
+
+.mode-select p {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  text-align: right;
+  letter-spacing: 2.5px;
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 16px;
+}
