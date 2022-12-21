@@ -9,7 +9,7 @@ header {
 }
 
 h1 {
-  color: #222731;
+  color: var(--font-black);
 }
 
 .mode-select {
@@ -21,12 +21,21 @@ h1 {
   color: var(--blue);
   border: none;
   background-color: var(--silver-white);
-  font-family: ;
+  cursor: pointer;
+}
+
+.mode-select:hover {
+  color: var(--font-black);
 }
 
 .mode-select img {
   height: 20px;
   width: 20px;
+}
+
+.mode-select:hover img {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(36%) saturate(425%)
+    hue-rotate(182deg) brightness(97%) contrast(90%);
 }
 
 .mode-select p {
