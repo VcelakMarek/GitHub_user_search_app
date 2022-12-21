@@ -32,22 +32,31 @@ const UserInfo = () => {
         </div>
       </section>
       <address>
-        <div className="address-item">
-          <img src="./assets/icon-location.svg" alt="icon-location" />
-          <p>San Francisco</p>
-        </div>
-        <div className="address-item">
-          <img src="./assets/icon-website.svg" alt="icon-location" />
-          <a href="github.com"> https://github.blog</a>
-        </div>
-        <div className="address-item">
-          <img src="./assets/icon-twitter.svg" alt="icon-location" />
-          <a href="twitter.com">Octocat</a>
-        </div>
-        <div className="address-item">
-          <img src="./assets/icon-company.svg" alt="icon-location" />
-          <p>@github</p>
-        </div>
+        <ul>
+          <li>
+            <img src="./assets/icon-location.svg" alt="icon-location" />
+            <p>San Francisco</p>
+          </li>
+          <li>
+            <img
+              //   className="not-available"
+              src="./assets/icon-website.svg"
+              alt="icon-website"
+            />
+            <a href="github.com"> https://github.blog</a>
+            {/* <a href="github.com" className="not-available">
+              Not Available
+            </a> */}
+          </li>
+          <li>
+            <img src="./assets/icon-twitter.svg" alt="icon-twitter" />
+            <a href="twitter.com">Octocat</a>
+          </li>
+          <li>
+            <img src="./assets/icon-company.svg" alt="icon-company" />
+            <p>@github</p>
+          </li>
+        </ul>
       </address>
     </div>
   );
