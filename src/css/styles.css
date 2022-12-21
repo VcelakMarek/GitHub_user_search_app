@@ -1,11 +1,13 @@
 :root {
   /* light_mode_colors */
   --light-blue: #0079ff;
+  --hover-light-blue: #60abff;
   --grey: #697c9a;
   --blue: #4b6a9b;
   --dark-blue: #2b3442;
   --silver-white: #f6f8ff;
   --white: #fefefe;
+  --font-black: #222731;
   /* dark_mode_colors */
   --dm-white: #ffffff;
   --dm-blue: #1e2a47;
@@ -40,9 +42,3 @@ body {
     color: #ffffff;
   }
 } */
-
-@media (min-width: 650px) {
-  .card {
-    width: 573px;
-  }
-}
