@@ -7,6 +7,7 @@ const SearchBar = () => {
         <div className="search-line">
           <img src="./assets/icon-search.svg" alt="icon-search" />
           <input type="text" placeholder="Search GitHub username…" />
+          <p className="hidden">No results</p>
           <button>Search </button>
         </div>
       </div>
