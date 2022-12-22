@@ -5,7 +5,7 @@ const UserInfo = () => {
     <div className="card">
       <section className="user-profile">
         <img src="./assets/icon-company.svg" alt="user-img" />
-        <div>
+        <div className="user-name">
           <h2>The Octocat</h2>
           <h3>@octocat</h3>
           <h4>Joined 25 Jan 2011</h4>
@@ -33,29 +33,33 @@ const UserInfo = () => {
       </section>
       <address>
         <ul>
-          <li>
-            <img src="./assets/icon-location.svg" alt="icon-location" />
-            <p>San Francisco</p>
-          </li>
-          <li>
-            <img
-              //   className="not-available"
-              src="./assets/icon-website.svg"
-              alt="icon-website"
-            />
-            <a href="github.com"> https://github.blog</a>
-            {/* <a href="github.com" className="not-available">
+          <div className="row">
+            <li>
+              <img src="./assets/icon-location.svg" alt="icon-location" />
+              <p>San Francisco</p>
+            </li>
+            <li>
+              <img
+                //   className="not-available"
+                src="./assets/icon-website.svg"
+                alt="icon-website"
+              />
+              <a href="github.com"> https://github.blog</a>
+              {/* <a href="github.com" className="not-available">
               Not Available
             </a> */}
-          </li>
-          <li>
-            <img src="./assets/icon-twitter.svg" alt="icon-twitter" />
-            <a href="twitter.com">Octocat</a>
-          </li>
-          <li>
-            <img src="./assets/icon-company.svg" alt="icon-company" />
-            <p>@github</p>
-          </li>
+            </li>
+          </div>
+          <div className="row">
+            <li>
+              <img src="./assets/icon-twitter.svg" alt="icon-twitter" />
+              <a href="twitter.com">Octocat</a>
+            </li>
+            <li>
+              <img src="./assets/icon-company.svg" alt="icon-company" />
+              <p>@github</p>
+            </li>
+          </div>
         </ul>
       </address>
     </div>
