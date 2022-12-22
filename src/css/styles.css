@@ -22,7 +22,6 @@ body {
   font-family: "Space Mono";
   font-style: normal;
   background-color: var(--silver-white);
-  /* height: 97vh; */
   display: grid;
   place-items: center;
 }
@@ -30,15 +29,14 @@ body {
 .card {
   background-color: var(--white);
   border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* @media (min-width: 800px) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --dark-blue: #ffffff;
-    --white: #1e2a47;
-    --silver-white: #141d2f;
-  }
-  .card p {
-    color: #ffffff;
+    --silver-white: var(--dm-dark-blue);
+    --white: var(--dm-blue);
+    --font-black: var(--dm-white);
+    --blue: var(--dm-white);
   }
 } */
