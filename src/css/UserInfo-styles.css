@@ -20,7 +20,7 @@ h4 {
 }
 
 h2 {
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   color: var(--dark-blue);
@@ -76,9 +76,11 @@ h4 {
   color: var(--grey);
 }
 
-address ul {
-  display: flex;
-  flex-flow: column nowrap;
+.card:last-child {
+  margin-bottom: 50px;
+}
+
+address .row {
   gap: 17px;
   font-weight: 400;
   font-size: 13px;
@@ -88,13 +90,19 @@ address ul {
   padding: 0;
 }
 
+address ul {
+  padding: 0;
+}
+
 address li {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   gap: 20px;
+  width: fit-content;
   height: 20px;
   color: var(--blue);
+  margin-bottom: 20px;
 }
 
 address li a {
@@ -114,6 +122,112 @@ address li img {
   height: 20px;
 }
 
-address li:last-child {
+/* address li:last-child {
   margin-bottom: 50px;
+} */
+
+@media (min-width: 750px) {
+  .card {
+    width: 573px;
+    gap: 32px;
+  }
+
+  .user-profile {
+    gap: 40px;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: -8px;
+  }
+
+  .user-profile img {
+    width: 117px;
+    height: 117px;
+  }
+
+  h2 {
+    margin-top: 12px;
+    font-size: 26px;
+    line-height: 39px;
+  }
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  h4 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .user-bio p {
+    font-size: 15px;
+    margin: 0 40px;
+  }
+
+  .stats {
+    width: 493px;
+  }
+
+  .stats p {
+    font-size: 13px;
+    line-height: 19px;
+    margin-bottom: 0px;
+  }
+
+  .stats h2 {
+    margin-top: 3px;
+  }
+
+  address {
+    width: 495px;
+    margin: auto;
+  }
+
+  address ul {
+    width: 429px;
+    height: 63px;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0;
+  }
+
+  address .row:first-child {
+    flex-basis: 120%;
+  }
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: 730px;
+    height: 444px;
+  }
+
+  .stats,
+  address {
+    margin-left: 200px;
+  }
+
+  .user-name {
+    position: relative;
+  }
+
+  .user-name h4 {
+    position: absolute;
+    left: 316px;
+    bottom: 75px;
+    width: 250px;
+  }
+
+  .user-bio {
+    position: relative;
+  }
+
+  .user-bio p {
+    position: absolute;
+    width: 480px;
+    left: 197px;
+    bottom: 1px;
+    margin: 0;
+  }
 }
