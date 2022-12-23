@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import fetchGitHubUser from "./fetchGitHubUser";
+import userDataContext from "./userData.context";
 import "./css/SearchBar-styles.css";
 
 const SearchBar = () => {
-  const [searchedUserName, setSearchedUserName] = useState();
+  const [userName, setUserName] = useState("");
+  const [userData, setUserData] = useContext(userDataContext);
+
+  useEffect(() => {
+    fetchGitHubUser(userName, setUserData);
+  }, []);
 
   return (
     <>
@@ -13,15 +20,24 @@ const SearchBar = () => {
             <input
               type="text"
               id="search-username"
-              value={searchedUserName}
+              value={userName}
               onChange={(e) => {
-                setSearchedUserName(e.target.value);
+                setUserName(e.target.value);
               }}
               placeholder="Search GitHub username…"
             />
           </label>
           <p className="hidden">No results</p>
-          <button>Search </button>
+          <button
+            onClick={(e) => {
+              fetchGitHubUser(userName, setUserData),
+                console.log(userData),
+                // console.log(userData.name);
+                e.preventDefault();
+            }}
+          >
+            Search
+          </button>
         </div>
       </div>
     </>
