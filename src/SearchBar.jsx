@@ -8,7 +8,7 @@ const SearchBar = () => {
   const [userData, setUserData] = useContext(userDataContext);
 
   useEffect(() => {
-    fetchGitHubUser(userName, setUserData);
+    fetchGitHubUser("octocat", setUserData);
   }, []);
 
   return (
@@ -23,6 +23,9 @@ const SearchBar = () => {
               value={userName}
               onChange={(e) => {
                 setUserName(e.target.value);
+              }}
+              onKeyUp={(e) => {
+                if (e.key === "Enter") fetchGitHubUser(userName, setUserData);
               }}
               placeholder="Search GitHub username…"
             />
