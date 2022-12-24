@@ -13,15 +13,13 @@
   margin: 0 7px;
 }
 
-.hidden {
-  display: none;
-}
-
 .search-line p {
   color: #f74646;
   font-weight: 400;
   font-size: 13px;
   line-height: 25px;
+  width: 100px;
+  z-index: 10;
 }
 
 .search-line img {
@@ -34,6 +32,7 @@
   all: unset;
   width: 190px;
   cursor: text;
+  color: var(--dark-blue);
 }
 
 .search-line input:active {
