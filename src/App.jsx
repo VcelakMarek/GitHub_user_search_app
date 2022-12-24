@@ -4,7 +4,7 @@ import userDataContext from "./userData.context";
 import DevFinder from "./DevFinder";
 
 const App = () => {
-  const userData = useState("octocat");
+  const userData = useState(userDataContext);
   return (
     <>
       <userDataContext.Provider value={userData}>
