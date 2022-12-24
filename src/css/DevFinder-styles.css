@@ -26,7 +26,7 @@ h1 {
 }
 
 .mode-select:hover {
-  color: var(--font-black);
+  color: var(--mode-hover);
 }
 
 .mode-select img {
@@ -35,8 +35,7 @@ h1 {
 }
 
 .mode-select:hover img {
-  filter: brightness(0) saturate(100%) invert(11%) sepia(36%) saturate(425%)
-    hue-rotate(182deg) brightness(97%) contrast(90%);
+  filter: var(--hover-filter);
 }
 
 .mode-select p {
