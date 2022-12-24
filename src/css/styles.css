@@ -8,6 +8,11 @@
   --silver-white: #f6f8ff;
   --white: #fefefe;
   --font-black: #222731;
+  --mode-hover: #222731;
+  --hover-filter-blue: brightness(0) saturate(100%) invert(83%) sepia(49%)
+    saturate(2169%) hue-rotate(185deg) brightness(88%) contrast(90%);
+  --hover-filter-black: brightness(0) saturate(100%) invert(11%) sepia(36%)
+    saturate(425%) hue-rotate(182deg) brightness(97%) contrast(90%);
   /* dark_mode_colors */
   --dm-white: #ffffff;
   --dm-blue: #1e2a47;

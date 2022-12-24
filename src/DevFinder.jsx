@@ -6,14 +6,39 @@ import "./css/DevFinder-styles.css";
 const DevFinder = () => {
   const [darkMode, setDarkMode] = useState();
 
-  const changeColorMode = () => {
-    darkMode ? setDarkMode(false) : setDarkMode(true);
-
-    document.documentElement.style.setProperty("--silver-white", "#141d2f");
-    document.documentElement.style.setProperty("--white", "#1e2a47");
-    document.documentElement.style.setProperty("--font-black", "#ffffff");
-    document.documentElement.style.setProperty("--blue", "#ffffff");
-  };
+  useEffect(() => {
+    darkMode
+      ? (document.documentElement.style.setProperty(
+          "--silver-white",
+          "#141d2f"
+        ),
+        document.documentElement.style.setProperty("--white", "#1e2a47"),
+        document.documentElement.style.setProperty("--font-black", "#ffffff"),
+        document.documentElement.style.setProperty("--blue", "#ffffff"),
+        document.documentElement.style.setProperty("--dark-blue", "#ffffff"),
+        document.documentElement.style.setProperty("--grey", "#ffffff"),
+        document.documentElement.style.setProperty("--font-black", "#ffffff"),
+        document.documentElement.style.setProperty("--mode-hover", "#90A4D4"),
+        document.documentElement.style.setProperty(
+          "--hover-filter",
+          "var(--hover-filter-blue)"
+        ))
+      : (document.documentElement.style.setProperty(
+          "--silver-white",
+          "#f6f8ff"
+        ),
+        document.documentElement.style.setProperty("--white", "#fefefe"),
+        document.documentElement.style.setProperty("-font-black", "#222731"),
+        document.documentElement.style.setProperty("--blue", "#4b6a9b"),
+        document.documentElement.style.setProperty("--dark-blue", "#2b3442"),
+        document.documentElement.style.setProperty("--grey", "#697c9a"),
+        document.documentElement.style.setProperty("--font-black", "#222731"),
+        document.documentElement.style.setProperty("--mode-hover", "#222731"),
+        document.documentElement.style.setProperty(
+          "--hover-filter",
+          "var(--hover-filter-black)"
+        ));
+  }, [darkMode]);
 
   useEffect(() => {
     window.matchMedia("(prefers-color-scheme: dark)")
@@ -28,7 +53,7 @@ const DevFinder = () => {
         <button
           className="mode-select"
           onClick={() => {
-            changeColorMode();
+            darkMode ? setDarkMode(false) : setDarkMode(true);
           }}
         >
           {darkMode ? (

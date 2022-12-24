@@ -36,10 +36,15 @@
   cursor: text;
 }
 
+.search-line input:active {
+  background-color: var(--white);
+}
+
 .search-line input::placeholder {
   font-weight: 400;
   font-size: 13px;
   line-height: 25px;
+  color: var(--blue);
 }
 
 .search-line button {
@@ -48,7 +53,7 @@
   border: none;
   border-radius: 10px;
   background-color: var(--light-blue);
-  color: var(--white);
+  color: #ffffff;
   font-family: "Space Mono";
   font-weight: 500;
   font-size: 14px;
