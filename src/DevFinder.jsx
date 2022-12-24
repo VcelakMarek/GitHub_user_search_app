@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEventHandler } from "react";
 import SearchBar from "./SearchBar";
 import UserInfo from "./UserInfo";
 import "./css/DevFinder-styles.css";
@@ -6,44 +6,33 @@ import "./css/DevFinder-styles.css";
 const DevFinder = () => {
   const [darkMode, setDarkMode] = useState();
 
-  useEffect(() => {
-    darkMode
-      ? (document.documentElement.style.setProperty(
-          "--silver-white",
-          "#141d2f"
-        ),
-        document.documentElement.style.setProperty("--white", "#1e2a47"),
-        document.documentElement.style.setProperty("--font-black", "#ffffff"),
-        document.documentElement.style.setProperty("--blue", "#ffffff"),
-        document.documentElement.style.setProperty("--dark-blue", "#ffffff"),
-        document.documentElement.style.setProperty("--grey", "#ffffff"),
-        document.documentElement.style.setProperty("--font-black", "#ffffff"),
-        document.documentElement.style.setProperty("--mode-hover", "#90A4D4"),
-        document.documentElement.style.setProperty(
-          "--hover-filter",
-          "var(--hover-filter-blue)"
-        ))
-      : (document.documentElement.style.setProperty(
-          "--silver-white",
-          "#f6f8ff"
-        ),
-        document.documentElement.style.setProperty("--white", "#fefefe"),
-        document.documentElement.style.setProperty("-font-black", "#222731"),
-        document.documentElement.style.setProperty("--blue", "#4b6a9b"),
-        document.documentElement.style.setProperty("--dark-blue", "#2b3442"),
-        document.documentElement.style.setProperty("--grey", "#697c9a"),
-        document.documentElement.style.setProperty("--font-black", "#222731"),
-        document.documentElement.style.setProperty("--mode-hover", "#222731"),
-        document.documentElement.style.setProperty(
-          "--hover-filter",
-          "var(--hover-filter-black)"
-        ));
-  }, [darkMode]);
+  const setDark = () => {
+    localStorage.setItem("theme", "dark");
+    document.documentElement.setAttribute("data-theme", "dark");
+  };
+
+  const setLight = () => {
+    localStorage.setItem("theme", "light");
+    document.documentElement.setAttribute("data-theme", "light");
+  };
+
+  // const storedTheme = localStorage.getItem("theme");
+
+  // const prefersDark =
+  //   window.matchMedia &&
+  //   window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  // const defaultDark =
+  // storedTheme === "dark" || (storedTheme === null && prefersDark);
+
+  // if (defaultDark) {
+  //   setDark();
+  // }
 
   useEffect(() => {
     window.matchMedia("(prefers-color-scheme: dark)")
-      ? setDarkMode(true)
-      : setDarkMode(false);
+      ? [setDarkMode(true), setDark()]
+      : [setDarkMode(false), setLight];
   }, []);
 
   return (
@@ -53,7 +42,8 @@ const DevFinder = () => {
         <button
           className="mode-select"
           onClick={() => {
-            darkMode ? setDarkMode(false) : setDarkMode(true);
+            darkMode ? setLight() : setDark();
+            setDarkMode(!darkMode);
           }}
         >
           {darkMode ? (
