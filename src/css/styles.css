@@ -9,14 +9,26 @@
   --white: #fefefe;
   --font-black: #222731;
   --mode-hover: #222731;
-  --hover-filter-blue: brightness(0) saturate(100%) invert(83%) sepia(49%)
-    saturate(2169%) hue-rotate(185deg) brightness(88%) contrast(90%);
-  --hover-filter-black: brightness(0) saturate(100%) invert(11%) sepia(36%)
+  --hover-filter: brightness(0) saturate(100%) invert(11%) sepia(36%)
     saturate(425%) hue-rotate(182deg) brightness(97%) contrast(90%);
   /* dark_mode_colors */
   --dm-white: #ffffff;
   --dm-blue: #1e2a47;
   --dm-dark-blue: #141d2f;
+  --dm-hover-filter: brightness(0) saturate(100%) invert(83%) sepia(49%)
+    saturate(2169%) hue-rotate(185deg) brightness(88%) contrast(90%);
+}
+
+[data-theme="dark"] {
+  --silver-white: var(--dm-dark-blue);
+  --white: var(--dm-blue);
+  --font-black: var(--dm-white);
+  --blue: var(--dm-white);
+  --dark-blue: var(--dm-white);
+  --grey: var(--dm-white);
+  --font-black: var(--dm-white);
+  --mode-hover: var(--dm-white);
+  --hover-filter: var(--dm-hover-filter);
 }
 
 html {
