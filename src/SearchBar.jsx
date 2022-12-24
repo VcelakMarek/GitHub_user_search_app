@@ -30,7 +30,7 @@ const SearchBar = () => {
               placeholder="Search GitHub username…"
             />
           </label>
-          <p className="hidden">No results</p>
+          {userData === 404 && <p>No results</p>}
           <button
             onClick={(e) => {
               fetchGitHubUser(userName, setUserData),
