@@ -27,16 +27,14 @@ const SearchBar = () => {
               onKeyUp={(e) => {
                 if (e.key === "Enter") fetchGitHubUser(userName, setUserData);
               }}
-              placeholder="Search GitHub username…"
+              placeholder={userData != 404 ? "Search GitHub username…" : ""}
             />
+            {userData === 404 && <p>No results</p>}
           </label>
-          {userData === 404 && <p>No results</p>}
+
           <button
             onClick={(e) => {
-              fetchGitHubUser(userName, setUserData),
-                console.log(userData),
-                // console.log(userData.name);
-                e.preventDefault();
+              fetchGitHubUser(userName, setUserData), e.preventDefault();
             }}
           >
             Search
