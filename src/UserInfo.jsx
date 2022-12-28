@@ -4,6 +4,19 @@ import "./css/UserInfo-styles.css";
 
 const UserInfo = () => {
   const [userData] = useContext(userDataContext);
+  const date = new Date(userData.created_at);
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  console.log(day, month, year);
+  const test = [day, month, year];
+
+  const created_at = new Date(day, month, year).toGMTString("en-us", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+  console.log(created_at);
   return (
     <div className="card">
       <section className="user-profile">

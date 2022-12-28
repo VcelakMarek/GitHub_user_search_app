@@ -15,6 +15,7 @@
   --dm-white: #ffffff;
   --dm-blue: #1e2a47;
   --dm-dark-blue: #141d2f;
+  --dm-hover-blue: #90a4d4;
   --dm-hover-filter: brightness(0) saturate(100%) invert(83%) sepia(49%)
     saturate(2169%) hue-rotate(185deg) brightness(88%) contrast(90%);
 }
@@ -27,7 +28,7 @@
   --dark-blue: var(--dm-white);
   --grey: var(--dm-white);
   --font-black: var(--dm-white);
-  --mode-hover: var(--dm-white);
+  --mode-hover: var(--dm-hover-blue);
   --hover-filter: var(--dm-hover-filter);
 }
 
