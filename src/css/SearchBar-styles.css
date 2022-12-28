@@ -13,13 +13,19 @@
   margin: 0 7px;
 }
 
+label {
+  position: relative;
+}
+
 .search-line p {
+  position: absolute;
   color: #f74646;
   font-weight: 400;
   font-size: 13px;
   line-height: 25px;
   width: 100px;
-  z-index: 10;
+  top: -12px;
+  left: 100px;
 }
 
 .search-line img {
@@ -77,6 +83,9 @@
   .search-line p {
     font-size: 18px;
     line-height: 25px;
+    width: 120px;
+    top: -18px;
+    left: 250px;
   }
 
   .search-line img {
@@ -107,6 +116,10 @@
 
   .search-line input {
     width: 500px;
+  }
+
+  .search-line p {
+    left: 400px;
   }
 
   .search-line button {
