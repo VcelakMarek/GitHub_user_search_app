@@ -6,17 +6,9 @@ const UserInfo = () => {
   const [userData] = useContext(userDataContext);
   const date = new Date(userData.created_at);
   const year = date.getFullYear();
-  const month = date.getMonth() + 1;
+  const month = date.toLocaleString("default", { month: "short" });
   const day = date.getDate();
-  console.log(day, month, year);
-  const test = [day, month, year];
 
-  const created_at = new Date(day, month, year).toGMTString("en-us", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  });
-  console.log(created_at);
   return (
     <div className="card">
       <section className="user-profile">
@@ -24,15 +16,11 @@ const UserInfo = () => {
         <div className="user-name">
           <h2>{userData.name}</h2>
           <h3>@{userData.login}</h3>
-          <h4>Joined 25 Jan 2011</h4>
+          <h4>{`Joined ${day} ${month} ${year}`}</h4>
         </div>
       </section>
       <section className="user-bio">
-        <p>
-          {userData.bio ? userData.bio : "This profile has no bio"}
-          {/* Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-          Quisque volutpat mattis eros. */}
-        </p>
+        <p>{userData.bio ? userData.bio : "This profile has no bio"}</p>
       </section>
       <section className="stats">
         <div>
