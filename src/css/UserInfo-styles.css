@@ -123,10 +123,6 @@ address li img {
   height: 20px;
 }
 
-/* address li:last-child {
-  margin-bottom: 50px;
-} */
-
 @media (min-width: 750px) {
   .card {
     width: 573px;

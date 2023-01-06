@@ -1,4 +1,4 @@
-import { useState, useEffect, ChangeEventHandler } from "react";
+import { useState, useEffect } from "react";
 import SearchBar from "./SearchBar";
 import UserInfo from "./UserInfo";
 import "./css/DevFinder-styles.css";
@@ -15,19 +15,6 @@ const DevFinder = () => {
     localStorage.setItem("theme", "light");
     document.documentElement.setAttribute("data-theme", "light");
   };
-
-  // const storedTheme = localStorage.getItem("theme");
-
-  // const prefersDark =
-  //   window.matchMedia &&
-  //   window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  // const defaultDark =
-  // storedTheme === "dark" || (storedTheme === null && prefersDark);
-
-  // if (defaultDark) {
-  //   setDark();
-  // }
 
   useEffect(() => {
     window.matchMedia("(prefers-color-scheme: dark)")
