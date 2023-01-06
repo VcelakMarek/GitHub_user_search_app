@@ -1,0 +1,230 @@
+.user-profile {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  margin-left: 24px;
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+
+.user-profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--dark-blue);
+}
+h3 {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--light-blue);
+}
+h4 {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--grey);
+  margin-top: 7px;
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+  width: 327px;
+  gap: 23px;
+}
+
+.user-bio p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 25px;
+  color: var(--grey);
+  margin: 0 24px;
+}
+
+.stats {
+  width: 279px;
+  height: 85px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  background-color: var(--silver-white);
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.stats div {
+  text-align: center;
+}
+
+.stats p {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--grey);
+}
+
+.card:last-child {
+  margin-bottom: 50px;
+}
+
+address .row {
+  gap: 17px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  width: 279px;
+  margin: auto;
+  padding: 0;
+}
+
+address ul {
+  padding: 0;
+}
+
+address li {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+  height: 20px;
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+address li a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+address li a:hover {
+  text-decoration: underline;
+}
+
+address .not-available {
+  opacity: 0.5;
+}
+
+address li img {
+  height: 20px;
+}
+
+@media (min-width: 750px) {
+  .card {
+    width: 573px;
+    gap: 32px;
+  }
+
+  .user-profile {
+    gap: 40px;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: -8px;
+  }
+
+  .user-profile img {
+    width: 117px;
+    height: 117px;
+  }
+
+  h2 {
+    margin-top: 12px;
+    font-size: 26px;
+    line-height: 39px;
+  }
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  h4 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .user-bio p {
+    font-size: 15px;
+    margin: 0 40px;
+  }
+
+  .stats {
+    width: 493px;
+  }
+
+  .stats p {
+    font-size: 13px;
+    line-height: 19px;
+    margin-bottom: 0px;
+  }
+
+  .stats h2 {
+    margin-top: 3px;
+  }
+
+  address {
+    width: 495px;
+    margin: auto;
+  }
+
+  address ul {
+    width: 429px;
+    height: 63px;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0;
+  }
+
+  address .row:first-child {
+    flex-basis: 120%;
+  }
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: 730px;
+    height: 444px;
+  }
+
+  .stats,
+  address {
+    margin-left: 200px;
+  }
+
+  .user-name {
+    position: relative;
+  }
+
+  .user-name h4 {
+    position: absolute;
+    left: 316px;
+    bottom: 75px;
+    width: 250px;
+  }
+
+  .user-bio {
+    position: relative;
+  }
+
+  .user-bio p {
+    position: absolute;
+    width: 480px;
+    left: 197px;
+    bottom: 1px;
+    margin: 0;
+  }
+}
