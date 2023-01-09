@@ -41,24 +41,24 @@ const UserInfo = () => {
           <div className="row">
             {userData.location ? (
               <li>
-                <img src="./assets/icon-location.svg" alt="icon-location" />
+                <img src="./icon-location.svg" alt="icon-location" />
                 <p>{userData.location}</p>
               </li>
             ) : (
               <li className="not-available">
-                <img src="./assets/icon-location.svg" alt="icon-location" />
+                <img src="./icon-location.svg" alt="icon-location" />
                 <p>Not Available</p>
               </li>
             )}
 
             {userData.blog ? (
               <li>
-                <img src="./assets/icon-website.svg" alt="icon-website" />
+                <img src="./icon-website.svg" alt="icon-website" />
                 <a href={userData.blog}> {userData.blog}</a>
               </li>
             ) : (
               <li className="not-available">
-                <img src="./assets/icon-website.svg" alt="icon-website" />
+                <img src="./icon-website.svg" alt="icon-website" />
                 <p>Not Available</p>
               </li>
             )}
@@ -66,24 +66,24 @@ const UserInfo = () => {
           <div className="row">
             {userData.twitter_username ? (
               <li>
-                <img src="./assets/icon-twitter.svg" alt="icon-twitter" />
+                <img src="./icon-twitter.svg" alt="icon-twitter" />
                 <a href="twitter.com">{userData.twitter_username}</a>
               </li>
             ) : (
               <li className="not-available">
-                <img src="./assets/icon-twitter.svg" alt="icon-twitter" />
+                <img src="./icon-twitter.svg" alt="icon-twitter" />
                 <p>Not Available</p>
               </li>
             )}
 
             {userData.company ? (
               <li>
-                <img src="./assets/icon-company.svg" alt="icon-company" />
+                <img src="./icon-company.svg" alt="icon-company" />
                 <p>{userData.company}</p>
               </li>
             ) : (
               <li className="not-available">
-                <img src="./assets/icon-company.svg" alt="icon-company" />
+                <img src="./icon-company.svg" alt="icon-company" />
                 <p>Not Available</p>
               </li>
             )}

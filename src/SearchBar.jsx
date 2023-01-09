@@ -15,7 +15,7 @@ const SearchBar = () => {
     <>
       <div id="search-bar" className="card">
         <div className="search-line">
-          <img src="./assets/icon-search.svg" alt="icon-search" />
+          <img src="./icon-search.svg" alt="icon-search" />
           <label htmlFor="search-username">
             <input
               type="text"

@@ -36,12 +36,12 @@ const DevFinder = () => {
           {darkMode ? (
             <>
               <p>LIGHT</p>
-              <img src="./assets/icon-sun.svg" alt="icon-sun" />
+              <img src="./icon-sun.svg" alt="icon-sun" />
             </>
           ) : (
             <>
               <p>DARK</p>
-              <img src="./assets/icon-moon.svg" alt="icon-moon" />
+              <img src="./icon-moon.svg" alt="icon-moon" />
             </>
           )}
         </button>
